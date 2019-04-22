@@ -9,7 +9,7 @@ class Movie(models.Model):
     RATTINGS = (
         (NOT_RATED, 'NR - Not Rated'),
         (RATED_G, 'G - General Audiences'),
-        (RATED_PG, 'PG - Parental Guidance', 'Suggested'),
+        (RATED_PG, 'PG - Parental Guidance Suggested'),
         (RATED_R, 'R - Restricted'),
     )
 

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=devices-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>{% block title %} MovieStar {% endblock %}</title>
+    <style>
+        .moviestar-masthead{
+            background-color: #EEEEEE;
+            margin-bottom: 1em;
+        }
+    </style>
+</head>
+<body>
+<div class="moviestar-masthead">
+    <div class="container">
+        <nav class="nav">
+            <div class="navbar-brand">MovieStar</div>
+            <a class="nav-link" href="{% url 'core:MovieList' %}">Movies</a>
+        </nav>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-8 moviestar-main">
+            {% block main %}{%  endblock %}
+        </div>
+        <div class="col-sm-3 offset-sm-1 moviestar-sidebar">
+            {% block sidebar %}{% endblock %}
+        </div>
+    </div>
+</div>
+</body>
+</html>

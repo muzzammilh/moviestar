@@ -20,5 +20,6 @@ class Movie(models.Model):
     runtime = models.PositiveIntegerField()
     website = models.URLField(blank=True)
 
+    #This will be used in admin panel title for movie record
     def __str__(self):
         return '{} ({})'.format(self.title, self.year)

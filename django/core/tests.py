@@ -24,5 +24,6 @@ class MovieListPaginationTestCase(TestCase):
         request = RequestFactory().get(path=movie_list_path)
         response = MovieList.as_view()(request)
         self.assertEqual(200, response.status_code)
+        #TODO fix_following_assertions
         #self.assertTrue(response.context_data['is_paginated'])
         #self.assertInHTML(self.ACTIVE_PAGINATION_HTML.format(movie_list_path, 1, 1), response.rendered_content)

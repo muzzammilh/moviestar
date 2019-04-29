@@ -55,11 +55,14 @@ class PersonManager(models.Manager):
             'role_set__movie'
         )
 
+
 class Person(models.Model):
     first_name = models.CharField(max_length=140)
     last_name = models.CharField(max_length=140)
     born = models.DateField()
     died = models.DateField(null=True, blank=True)
+
+    objects = PersonManager()
 
     class Meta:
         ordering = ('last_name', 'first_name')

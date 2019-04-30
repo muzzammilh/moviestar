@@ -1,6 +1,19 @@
 from django.db import models
 
 
+class MovieManager(models.Manager):
+    def all_with_related_persons(self):
+        qs = self.get_queryset()
+        qs = qs.select_related(
+            'director'
+        )
+        qs = qs.prefetch_related(
+            'writers',
+            'actors'
+        )
+        return qs
+
+
 class Movie(models.Model):
     NOT_RATED = 0
     RATED_G = 1

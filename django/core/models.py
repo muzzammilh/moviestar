@@ -51,6 +51,8 @@ class Movie(models.Model):
         blank=True
     )
 
+    objects = MovieManager()
+
     class Meta:
         ordering = ('-year', 'title')
 
